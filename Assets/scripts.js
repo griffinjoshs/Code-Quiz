@@ -139,7 +139,7 @@ function endGame() {
     //set score
     var body = document.body;
     body.outerHTML = "Game over, You scored " + correctCount;
-    return
+    setTimeout(showHighScore, 2);
 }
 
 function showHighScore() {
