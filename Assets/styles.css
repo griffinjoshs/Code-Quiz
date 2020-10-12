@@ -2,22 +2,114 @@
     display: none;
 }
 
-body {
-    background-color: brown;
+#timer {
+    background-color: teal;
+    color: white;
+    text-align: center;
+}
+
+.jumbotron {
+    background-color: transparent!important;
 }
 
 #start {
-    background-color: blue;
-    color: white;
+    background-color: black;
     text-align: center;
-    padding-top: 300px;
-    padding-bottom: 300px;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
     margin-bottom: 75%;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    box-shadow: 0 34px 32px 0 rgba(0,0,0,0.2);
+    transition: 0.8s;
+    font-size: larger;
+    border-radius: 4pc;
+}
+
+#start-button {
+    background-color: white;
+    border: solid white;
+    color: black;
+}
+
+#start-button:hover {
+    background-color: turquoise;
 }
 
 #start:hover {
-    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#question {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 75%;
+    box-shadow: 0 34px 32px 0 rgba(0,0,0,0.2);
+    transition: 0.8s;
+    font-size: larger;
+    border-radius: 4pc;
+}
+
+#question:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#timer {
+    text-align: center;
+    padding-top: 20px;
+}
+
+#tiktok {
+    font-size: 90px;
+}
+
+#button1 {
+    border: solid white;
+    background-color: white;
+}
+
+#button2 {
+    border: solid white;
+    background-color: white;
+}
+
+#button3 {
+    border: solid white;
+    background-color: white;
+}
+
+#button4 {
+    border: solid white;
+    background-color: white;
+}
+
+#button1:hover {
+    background-color: turquoise;
+}
+
+#button2:hover {
+    background-color: turquoise;
+}
+
+#button3:hover {
+    background-color: turquoise;
+}
+
+#button4:hover {
+    background-color: turquoise;
+}
+
+#end {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 75%;
+    box-shadow: 0 34px 32px 0 rgba(0,0,0,0.2);
+    transition: 0.8s;
+    font-size: larger;
+    border-radius: 4pc;
+}

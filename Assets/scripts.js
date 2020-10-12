@@ -1,13 +1,13 @@
 var questions = [
     {
-        title: "What is 2 + 2",
-        choices: ["2", "3", "4", "5"],
+        title: "How many times Should I try to post a day on TikTok?",
+        choices: ["1", "2", "3", "4"],
         answer: "4"
     },
     {
-        title: "What color is the sky",
-        choices: ["blue", "red", "black", "green"],
-        answer: "blue"
+        title: "How many hashtags should I use in one post?",
+        choices: ["3", "5", "6", "as many as possible"],
+        answer: "5"
     },
 ];
 var questionIndex = 0;
@@ -107,22 +107,6 @@ function nextQuestion() {
     console.log("calling getQuestion inside of nextQuestion")
     getQuestion();
 }
-    
-
-
-
-
-
-
-
-
-    //check if "event.target.value" = questions [questionIndex].answer
-    //if answer = true tell user they got the answer correct, else (if they got it wrong tell them they got it wrong)
-    //increase question index by 1
-    //if questionIndex is <(lessthan) questions.length 
-    //call getQuestion function again
-    //else 
-    //call the endGame function
 
 
 function endGame() {
@@ -152,20 +136,23 @@ function showHighScore() {
   } else {
     high_scores = JSON.parse(high_scores);
   }
+
+high_scores.push({ name: name, score: correctCount });
+
+localStorage.setItem("scores", JSON.stringify(high_scores));
+
+var textUl = document.createElement("ul");
+
+for (var i = 0; i < high_scores.length; i++) {
+    var textLi = document.createElement("li");
+    textLi.textContent =
+      "Name: " + high_scores[i].name + " Score: " + high_scores[i].score;
+    textUl.appendChild(textLi);
+  }
+
+  document.body.appendChild(textUl);
 }
 
-submitButton.addEventListener("click", submitButton) 
-{
-
-}
-
-    //retrieve user-entered initials
-    //retrieve high scores from local storage, 
-    //set var highScores = localStorage.getItem(keyvalue "high scores") cast this using JSON.parse
-    //set new score object that will have initials: intials; score: time left
-    //push new score object to the high score array
-    //save high score array back to local storage
-    //})
 
 
 

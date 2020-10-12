@@ -8,33 +8,49 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-    <div id="timer">
+    
         <br>
     </div class="container-sm">
     <div class="row">
         <div class="col-2"></div>
+        <div id="timer"></div>
         <div class="col-8">
             <div id="start">
-                <p>You will answer these questions</p>
-                <button id="start-button">Start</button>
-        <div class="col-2"></div>
+                <div class="jumbotron">
+                    <ion-icon name="logo-tiktok" id="tiktok"></ion-icon>
+                    <h1 class="display-4">TikTok Growth Hacks Quiz</h1>
+                    <p class="lead">You will answer these questions</p>
+                    <hr class="my-4">
+                    <p>Lets See How Well U know your TikTok growth so u can learn how to go viral and get millions of followers!</p>
+                    <a class="btn btn-primary btn-lg" href="#" role="button" id="start-button">start</a>
+                  </div>
+                <div class="col-2"></div>
         </div>
     </div>
     
     </div>
     </div>
-    <div class="hide" id="question">
-        <h1 id="title"></h1>
-        <button id="button1" type="button"></button>
-        <button id="button2" type="button"></button>
-        <button id="button3" type="button"></button>
-        <button id="button4" type="button"></button>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="hide" id="question">
+                    <h1 id="title"></h1>
+                    <button id="button1" type="button"></button>
+                    <button id="button2" type="button"></button>
+                    <button id="button3" type="button"></button>
+                    <button id="button4" type="button"></button>
+                </div>
+                <div class="col-2"></div>
+        </div>
     </div>
+    
     <div id="end" class="hide">
         <span id="score"></span>
         <input id="initials" type="text">
-        <button id="submit-button" type="button">Submit</button>
+        <!-- <button id="submit-button" type="button">Submit</button> -->
     </div>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <script src="./Assets/scripts.js"></script>
 </body>
 </html>
