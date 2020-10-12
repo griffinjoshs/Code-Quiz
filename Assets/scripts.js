@@ -95,7 +95,7 @@ function checkAnswer(event) {
     }
     console.log("calling nextQuestion inside of checkAnswer")
     setTimeout(nextQuestion, 2000)
-    
+
 }
 
 function nextQuestion() {
@@ -103,7 +103,7 @@ function nextQuestion() {
     if (questionIndex === questions.length || timer < 0) {
         timer = 0;
         endGame();
-    }   
+    }
     console.log("calling getQuestion inside of nextQuestion")
     getQuestion();
 }
@@ -127,30 +127,35 @@ function endGame() {
 }
 
 function showHighScore() {
-  var name = prompt("Please enter your name");
+    document.body.style.paddingTop = "40px"
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    document.body.style.textAlign = "center";
 
-  var high_scores = localStorage.getItem("scores");
+    var name = prompt("Please enter your name");
 
-  if (!high_scores) {
-    high_scores = [];
-  } else {
-    high_scores = JSON.parse(high_scores);
-  }
+    var high_scores = localStorage.getItem("scores");
 
-high_scores.push({ name: name, score: correctCount });
+    if (!high_scores) {
+        high_scores = [];
+    } else {
+        high_scores = JSON.parse(high_scores);
+    }
 
-localStorage.setItem("scores", JSON.stringify(high_scores));
+    high_scores.push({ name: name, score: correctCount });
 
-var textUl = document.createElement("ul");
+    localStorage.setItem("scores", JSON.stringify(high_scores));
 
-for (var i = 0; i < high_scores.length; i++) {
-    var textLi = document.createElement("li");
-    textLi.textContent =
-      "Name: " + high_scores[i].name + " Score: " + high_scores[i].score;
-    textUl.appendChild(textLi);
-  }
+    var textUl = document.createElement("ul");
 
-  document.body.appendChild(textUl);
+    for (var i = 0; i < high_scores.length; i++) {
+        var textLi = document.createElement("li");
+        textLi.textContent =
+            "Name: " + high_scores[i].name + " Score: " + high_scores[i].score;
+        textUl.appendChild(textLi);
+    }
+
+    document.body.appendChild(textLi);
 }
 
 
